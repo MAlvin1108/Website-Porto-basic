@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets\styling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Faculty+Glyphic&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Silkscreen:wght@400;700&family=Tiny5&family=Uchen&display=swap" rel="stylesheet">
+    <title>Alvin-dex</title>
+</head>
+<body>
+    <header>
+        <h1>Alvin-Dex</h1>
+        <div class="container-head">
+            <nav>
+                <ul>
+                    <li><a href="https://linktr.ee/Malvin11">contact</a></li>
+                    <li><a href="https://github.com/MAlvin1108">github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="sidebar">
+        <aside>
+          <img src="Assets\img\profile.jpeg" alt="">
+           <p>Muhammad Alvin Maulana</p>  
+            <p>Undergradueted student </p>
+            <p>Airlangga University</p>
+        </aside>
+        </div>
+        
+    <div class="wrapper">
+        <article>
+            <h1 id="tittle">MY EXPERIENCES</h1>
+            <div class="filter-buttons">
+                <button onclick="filterYear('all')">All</button>
+                <button onclick="filterYear('2021')">2021</button>
+                <button onclick="filterYear('2022')">2022</button>
+                <button onclick="filterYear('2023')">2023</button>
+                <button onclick="filterYear('2024')">2024</button>
+            </div>
+            <ul class="experiences">
+                <li class="experience" data-year="2021" >
+                    <img src="Assets\img\My experiences\HM 2021.jpeg" alt="Himatika Mengabdi 2021">
+                    <a href="#" onclick="showPopup('Himatika Mengabdi 2021' ,'Ini adalah kegiatan pengabdian masyarakat yang saya lakukan pada semester 1 saat menjadi mahasiswa baru')">Himatika Mengabdi 2021</a>
+                </li>
+                <li class="experience" data-year="2022">
+                    <img src="Assets\img\My experiences\HM 2022.jpeg" alt="">
+                    <a href="#" onclick="showPopup('Himatika Mengabdi 2022' ,'Ini adalah acara lanjutan dari acara sebelumnya dengan kepengurusan yang berbeda dimana saya ditugaskan sebagai Kepala Divisi KAHUMJIN')">Himatika Mengabdi 2022</a>
+                </li>
+                <li class="experience" data-year="2021" >
+                    <img src="Assets\img\My experiences\Beta fst.jpeg" alt="">
+                    <a href="#" onclick="showPopup('BETA FST','Organisasi ini merupakan sebuah organisasi yang berfokus pada bidang kewirausahaan disini saya menjabat sebagai staff Education Business')">BETA FST periode 2021-2022</a>
+                </li>
+                <li class="experience" data-year="2023">
+                    <img src="Assets\img\My experiences\Kombat.jpeg" alt="">
+                    <a href="#" onclick="showPopup('KOMBAT 2022','Acara ini merupakan sebuah acara kompetisi minat dan bakat antar angkatan di prodi matematika dan saya menjabat sebagai ketua')">Ketua Kompetisi Minat dan Bakat 2023</a>
+                </li>
+                <li class="experience" data-year="2024">
+                    <img src="Assets\img\My experiences\KKN.jpeg" alt="">
+                    <a href="#" onclick="showPopup('KKN 2024','Acara ini diselenggarakan pada tahun 2024 di Banyuwangi dan berlangsung selama 1 bulan disini saya dan teman-teman membuat sebuah program unggulan untuk memenuhi 4 sektor yakni: lingkungan, pendidikan, ekonomi, dan kesehatan')">Ketua KKN BBK 4 Banyuwangi</a>
+                </li>
+                <li class="experience" data-year="2024">
+                    <img src="Assets\img\My experiences\magang.jpeg" alt="">
+                    <a href="#" onclick="showPopup('Magang' ,'Kegiatan ini saya lakukan pada tahun 2024 dimana saya bekerja di bidang anggaran dan membantu divisi IT disini pekerjaan saya adalah mendesign landing page di SSW-Alpha agar mudah di pahami olah lansi ketika menggunakannya dan untuk bidang anggarannya saya bertugas dalam balancing dan filtering rekap data belanja di BPKAD pada tahun 2023  ')">Magang di BPKAD Surabaya</a>
+                </li>
+                <li class="experience" data-year="2024" >
+                    <img src="Assets\img\My experiences\rental mobil.jpeg" alt="">
+                    <a href="#" onclick="showPopup('Poject','Project ini saya tujukan untuk memenuhi tugas akhir saya mata kuliah pemodelan matematika 2 yang digunakan untuk membantu masyarakat')">Membuat project Website rental mobil</a>
+                </li>
+            </ul>
+        </article>
+    </div>
+    </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> All rights reserved.</p>
+    </footer>
+        <script src="script.js">
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+</body>
+</html>
